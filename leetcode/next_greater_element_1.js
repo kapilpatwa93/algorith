@@ -27,6 +27,5 @@ function main() {
     let res = nextGreaterElement(nums1, nums2);
     console.log(res);
 }
-
 main()
 
