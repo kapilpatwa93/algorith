@@ -48,9 +48,7 @@ var reorganizeString = function (s) {
 };
 
 function main() {
-    // const s = "aaabbcccccc";
     const s = "abaa";
-    // const s = "vvvlo";
     const res = reorganizeString(s);
     console.log("res", res);
 }
