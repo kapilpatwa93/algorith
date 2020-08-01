@@ -23,6 +23,7 @@ var reorganizeString = function (s) {
         let strArr = [];
         let i = 0;
         while (i < s.length) {
+            // sort can be removed, and we can find max and 2nd max in linear time complexity
             arr.sort((a, b) => parseInt(b.count) - parseInt(a.count));
             {
                 let {char, count} = arr[0]
@@ -50,7 +51,7 @@ var reorganizeString = function (s) {
 function main() {
     const s = "abaa";
     const res = reorganizeString(s);
-    console.log("res", res);
+    console.log(res);
 }
 
 main()
