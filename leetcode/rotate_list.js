@@ -12,6 +12,7 @@
  * @param {number} k
  * @return {ListNode}
  */
+
 var rotateRight = function (head, k) {
     let count = 0;
     let tail = head;
