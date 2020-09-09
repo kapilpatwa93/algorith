@@ -1,5 +1,6 @@
 // https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii
 // 122. Best Time to Buy and Sell Stock II
+
 var maxProfit = function(prices) {
     let count = 0;
     let l = prices.length-1
