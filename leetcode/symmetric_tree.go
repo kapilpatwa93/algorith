@@ -55,7 +55,7 @@ func makeTree(input []int) *TreeNode {
 }
 func getTree(subRootIndex int, input []int) *TreeNode {
 	if subRootIndex >= len(input) || input[subRootIndex] == -1 {
-		return &TreeNode{}
+		return nil
 	}
 	return MakeTreeNode(input[subRootIndex], getTree((subRootIndex*2)+1, input), getTree((subRootIndex+1)*2, input))
 }
