@@ -19,7 +19,7 @@ var findDuplicates = function (nums) {
 function main() {
     let input = [2,2]
     let res = findDuplicates(input);
-    console.log("here", res);
+    console.log("res);
 
 }
 main();
