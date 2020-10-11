@@ -27,6 +27,7 @@ func recurse(p,q *TreeNode) bool  {
 	}
 	return recurse(p.Left,q.Left) && recurse(p.Right,q.Right)
 }
+
 func main() {
 	input1 := []int{1, 2, 2, 3, 3, 4, 3}
 	input2 := []int{1, 2, 2, 3, 4, 4, 3}
