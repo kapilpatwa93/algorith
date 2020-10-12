@@ -28,7 +28,7 @@ func distributeCandies(candies int, numPeople int) []int {
 
 }
 func main() {
-	candies := 7
+	candies := 10
 	numPeople := 4
 	res := distributeCandies(candies, numPeople)
 	fmt.Println(res)
