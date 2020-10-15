@@ -53,5 +53,6 @@ function main() {
     setZeroes(matrix)
     console.log(matrix);
 }
+
 main()
 
