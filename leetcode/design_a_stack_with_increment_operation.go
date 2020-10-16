@@ -21,7 +21,6 @@ func (this *CustomStack) Push(x int) {
 		(*this).top++
 		(*this).stack[(*this).top] = x
 	}
-
 }
 
 func (this *CustomStack) Pop() int {
@@ -31,7 +30,6 @@ func (this *CustomStack) Pop() int {
 		return t
 	}
 	return -1
-
 }
 
 func (this *CustomStack) Increment(k int, val int) {
