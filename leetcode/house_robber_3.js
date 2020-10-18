@@ -12,6 +12,7 @@
  * @param {TreeNode} root
  * @return {number}
  */
+
 var rob = function (root) {
     return Math.max(...recurse(root));
 };
