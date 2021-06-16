@@ -22,8 +22,8 @@ var nextGreaterElement = function (nums1, nums2) {
 };
 
 function main() {
-    let nums1 = [1, 3, 5, 2, 4]
-    let nums2 = [6, 5, 4, 3, 2, 1, 7];
+    let nums1 = [4,2,1]
+    let nums2 = [1,3,4,2];
     let res = nextGreaterElement(nums1, nums2);
     console.log(res);
 }
