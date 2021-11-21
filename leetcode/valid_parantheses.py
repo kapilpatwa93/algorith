@@ -30,7 +30,7 @@ def isOpening(parantheses: str) -> bool:
 
 
 def main():
-    strs = "[][]"
+    strs = "[][]{}"
     res = Solution().isValid(strs)
     print(res)
 
