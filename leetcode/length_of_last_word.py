@@ -13,3 +13,8 @@ class Solution:
                     return length
             index -= 1
         return length
+
+if __name__ == '__main__':
+    s = "this is leet code"
+    res = Solution().lengthOfLastWord(s)
+    print(res)
