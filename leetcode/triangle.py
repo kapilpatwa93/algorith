@@ -27,7 +27,5 @@ class Solution:
 
 if __name__ == '__main__':
     list = [[2], [3, 4], [6, 5, 7], [4, 1, 8, 3]]
-    # list = [[-10]]
-    # list = [[2], [1, 4], [10, 9, 2], [5, 6, 8, 4]]
     res = Solution().minimumTotal(list)
     print(res)
