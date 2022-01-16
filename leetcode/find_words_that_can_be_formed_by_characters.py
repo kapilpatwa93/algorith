@@ -6,7 +6,6 @@ class Solution:
     def countCharacters(self, words: List[str], chars: str) -> int:
         def getFreqMap(s: str):
             return Counter(s[:])
-
         charsFreqMap = getFreqMap(chars)
         totalLength = 0
         for word in words:
