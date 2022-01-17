@@ -20,5 +20,3 @@ class Solution:
                 lastBadVersion = mid
                 end = mid - 1
         return firstBadVersion
-     
-
