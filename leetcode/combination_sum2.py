@@ -29,7 +29,7 @@ class Solution:
 
 
 if __name__ == '__main__':
-    candidates = [10, 1, 2, 7, 6, 1, 5]
+    candidates = [10, 1, 2, 7, 6, 1, 5, 8]
     target = 8
     res = Solution().combinationSum2(candidates, target)
     print(res)
