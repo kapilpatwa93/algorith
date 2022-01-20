@@ -44,7 +44,7 @@ def getTree(nodes: List[int]) -> TreeNode:
 
 
 if __name__ == '__main__':
-    list = [1, 2, 3]
+    list = [1, 2, 3, 4]
     tree = getTree(list)
     res = Solution().countNodes(tree)
     print(res)
