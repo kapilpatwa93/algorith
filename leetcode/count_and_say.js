@@ -12,13 +12,14 @@ var countAndSay = function (n) {
     }
     return str;
 };
+
 function parseStr(str) {
     let count = 1;
     let prev = str.charAt(0);
     let parsedStr = '';
     for (let i = 1; i < str.length; i++) {
-        if(prev == str.charAt(i)) {
-            count ++
+        if (prev == str.charAt(i)) {
+            count++
         } else {
             parsedStr += `${count}${prev}`
             count = 1;
@@ -28,6 +29,7 @@ function parseStr(str) {
     parsedStr += `${count}${prev}`
     return parsedStr
 }
+
 function main() {
     let n = 5;
     let res = countAndSay(n);
