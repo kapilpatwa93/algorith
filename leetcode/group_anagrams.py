@@ -31,6 +31,6 @@ class Solution:
 
 
 if __name__ == '__main__':
-    strs = ["eat", "tea", "tan", "ate", "nat", "bat"]
+    strs = ["eat", "tea", "tan", "ate", "nat", "bat" , "mat"]
     res = Solution().groupAnagrams(strs)
     print(res)
