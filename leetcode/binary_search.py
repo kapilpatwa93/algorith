@@ -19,7 +19,7 @@ class Solution:
 
 
 def main():
-    nums = [-1, 0, 3, 5, 9, 12]
+    nums = [-1, 0, 3, 5, 9, 12, 14]
 
     target = 9
     res = Solution().search(nums, target)
