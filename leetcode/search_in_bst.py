@@ -41,9 +41,9 @@ def getTree(nodes: List[int]) -> TreeNode:
 
 
 if __name__ == '__main__':
-    list = [4, 2, 6, 1, 3, 5, 7]
+    list = [5, 2, 6, 1, 3, 5, 7]
     tree = getTree(list)
-    res = Solution().searchBST(tree, 31)
+    res = Solution().searchBST(tree, 6)
     if res is not None:
         print(res.val)
     else:
