@@ -43,7 +43,7 @@ def getTree(nodes: List[int]) -> TreeNode:
 
 
 if __name__ == '__main__':
-    list = [1, 2, 2]
+    list = [1, 2, 2, 3, 3, 3, 3]
     tree = getTree(list)
     res = Solution().isSymmetric(tree)
     print(res)
