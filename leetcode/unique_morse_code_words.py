@@ -25,6 +25,6 @@ class Solution:
 
 
 if __name__ == '__main__':
-    words = ["gin", "zen", "gig", "msg"]
+    words = ["gin", "zen", "gig", "msg","abc"]
     res = Solution().uniqueMorseRepresentations(words)
     print(res)
