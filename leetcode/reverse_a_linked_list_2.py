@@ -54,6 +54,77 @@ class Solution:
         return head
 
 
+# Definition for singly-linked list.
+from typing import List, Optional
+
+
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+    def print(self):
+        arr = []
+        head = self
+        while head is not None:
+            arr.append(head.val)
+            head = head.next
+        print(arr)
+
+
+def constructLinkedList(l: List[int]) -> Optional[ListNode]:
+    ll = ListNode(l[0])
+    head = ll
+    for index in range(1, len(l)):
+        node = ListNode(l[index], None)
+        head.next = node
+        head = node
+    return ll
+
+
+class SolutionNew:
+    def reverseBetweenNew(self, head: Optional[ListNode], left: int, right: int) -> Optional[ListNode]:
+        h = head
+        count = 0
+        part1End = None
+        final = h
+        while count < (left - 1):
+            part1End = h
+            h = h.next
+            count += 1
+
+        part2End = None
+        prev = None
+        while count < right:
+            if part2End is None:
+                part2End = h
+            next = h.next
+            h.next = prev
+            prev = h
+            h = next
+            count += 1
+
+        part2Start = prev
+        part3Start = h
+        if part1End is not None:
+            part1End.next = part2Start
+        else:
+            final = part2Start
+
+        part2End.next = part3Start
+
+        return final
+
+
+if __name__ == '__main__':
+    l = [1, 2, 3]
+    left = 1
+    right = 3
+    ll = constructLinkedList(l)
+    res = Solution().reverseBetween(ll, left, right)
+    print(res.print())
+
+
 def constructLinkedList(list: List[int]) -> Optional[ListNode]:
     ll = ListNode(list[0])
     head = ll
