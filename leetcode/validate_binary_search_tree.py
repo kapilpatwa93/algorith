@@ -1,4 +1,5 @@
 # Definition for a binary tree node.
+from math import inf
 from typing import Optional, List
 
 
@@ -26,23 +27,24 @@ def getTree(nodes: List[int]) -> TreeNode:
 
 
 class Solution:
+    lastVal = 0
+
     def isValidBST(self, root: Optional[TreeNode]) -> bool:
-        return self.recurse(root)
-
-    lastVal = None
-
-    def recurse(self, subRoot: TreeNode):
-        if subRoot is None:
+        if root is None:
             return True
-        isLeftValid = self.recurse(subRoot.left)
-        if self.lastVal is None:
-            isMidValid = True
-        else:
-            isMidValid = self.lastVal < subRoot.val
-        self.lastVal = subRoot.val
+        self.lastVal = -inf
 
-        isRightValid = self.recurse(subRoot.right)
-        return isRightValid and isLeftValid and isMidValid
+        def recurse(subroot: Optional[TreeNode]) -> bool:
+            if subroot is None:
+                return True
+            if not recurse(subroot.left):
+                return False
+            if subroot.val <= self.lastVal:
+                return False
+            self.lastVal = subroot.val
+            return recurse(subroot.right)
+
+        return recurse(root)
 
 
 if __name__ == '__main__':
