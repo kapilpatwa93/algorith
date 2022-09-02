@@ -21,3 +21,4 @@ if __name__ == '__main__':
     people = [[7, 0], [7, 1], [6, 1], [5, 0], [5, 2], [4, 4]]
     res = Solution().reconstructQueue(people)
     print(res)
+1,1,2,9,10
