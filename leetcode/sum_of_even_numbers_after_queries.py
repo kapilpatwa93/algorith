@@ -6,24 +6,20 @@ class Solution:
 
         evenTotal = 0
         res = []
-        flag = [False] * len(nums)
         for i in range(len(nums)):
             if nums[i] % 2 == 0:
-                flag[i] = True
                 evenTotal += nums[i]
         for q in queries:
             numToAdd, index = q[0], q[1]
+            wasEven = nums[index] % 2 == 0
             newNum = nums[index] + numToAdd
-
             if newNum % 2 == 0:
                 evenTotal += numToAdd
-                if flag[index] is False:
+                if wasEven is False:
                     evenTotal += nums[index]
-                    flag[index] = True
             else:
-                if flag[index] is True:
+                if wasEven is True:
                     evenTotal -= nums[index]
-                    flag[index] = False
             nums[index] = newNum
 
             res.append(evenTotal)
