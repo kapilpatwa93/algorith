@@ -7,6 +7,22 @@ class ListNode:
         self.val = val
         self.next = next
 
+    def print(self):
+        arr = []
+        head = self
+        while head is not None:
+            arr.append(head.val)
+            head = head.next
+        print(arr)
+
+def constructLinkedList(list: List[int]) -> Optional[ListNode]:
+    ll = ListNode(list[0])
+    head = ll
+    for index in range(1, len(list)):
+        node = ListNode(list[index], None)
+        head.next = node
+        head = node
+    return ll
 
 class Solution:
     def reverseBetween(self, head: Optional[ListNode], left: int, right: int) -> Optional[ListNode]:
@@ -53,35 +69,6 @@ class Solution:
 
         return head
 
-
-# Definition for singly-linked list.
-from typing import List, Optional
-
-
-class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
-
-    def print(self):
-        arr = []
-        head = self
-        while head is not None:
-            arr.append(head.val)
-            head = head.next
-        print(arr)
-
-
-def constructLinkedList(l: List[int]) -> Optional[ListNode]:
-    ll = ListNode(l[0])
-    head = ll
-    for index in range(1, len(l)):
-        node = ListNode(l[index], None)
-        head.next = node
-        head = node
-    return ll
-
-
 class SolutionNew:
     def reverseBetweenNew(self, head: Optional[ListNode], left: int, right: int) -> Optional[ListNode]:
         h = head
@@ -124,22 +111,3 @@ if __name__ == '__main__':
     res = Solution().reverseBetween(ll, left, right)
     print(res.print())
 
-
-def constructLinkedList(list: List[int]) -> Optional[ListNode]:
-    ll = ListNode(list[0])
-    head = ll
-    for index in range(1, len(list)):
-        node = ListNode(list[index], None)
-        head.next = node
-        head = node
-    return ll
-
-
-def main():
-    list = [1, 2, 3, 4, 5]
-    linkedList = constructLinkedList(list)
-    res = Solution().reverseBetween(linkedList, 1, 3)
-    print(res)
-
-
-main()
