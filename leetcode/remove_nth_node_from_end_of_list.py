@@ -49,7 +49,7 @@ def constructLinkedList(list: List[int]) -> Optional[ListNode]:
 
 
 if __name__ == '__main__':
-    list = [1, 2, 3, 4]
+    list = [1, 2, 3, 4, 5]
     n = 2
     ll = constructLinkedList(list)
     res = Solution().removeNthFromEnd(ll, n)
