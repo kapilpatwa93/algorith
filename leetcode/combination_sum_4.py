@@ -25,7 +25,7 @@ class Solution:
 
 
 if __name__ == '__main__':
-    nums = [1, 2, 3]
+    nums = [1, 2, 3, 4]
     target = 4
     res = Solution().combinationSum4(nums, target)
     print(res)
