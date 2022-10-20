@@ -60,6 +60,6 @@ class Solution:
 
 
 if __name__ == '__main__':
-    dominoes = "R.R..L..L.R.R.L.."
+    dominoes = "R.R..L..L.R.R.L..R"
     res = Solution().pushDominoes(dominoes)
     print(res)
