@@ -25,6 +25,6 @@ class Solution:
 
 
 if __name__ == '__main__':
-    properties = [[5, 2], [7, 3], [1, 6], [2, 3], [3, 9], [4, 8], [6, 7], [8, 4], [2, 3]]
+    properties = [[5, 2], [7, 3], [1, 6], [2, 3], [3, 9], [4, 8], [6, 7], [8, 4], [2, 3], [2, 4]]
     res = Solution().numberOfWeakCharacters(properties)
     print(res)
