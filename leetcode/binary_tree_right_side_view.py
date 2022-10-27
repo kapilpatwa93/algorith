@@ -44,7 +44,6 @@ class Solution:
 
 if __name__ == '__main__':
     list = []
-
     tree = getTree(list)
     res = Solution().rightSideView(tree)
     print(res)
