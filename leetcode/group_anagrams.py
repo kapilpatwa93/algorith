@@ -1,36 +1,31 @@
-import collections
-from typing import List, Dict
+from collections import Counter
+from typing import List
 
 
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-        def getFreqMap(string: str):
-            return collections.Counter(string)
+        aMap = {}
 
-        def getEncodedStrFromFreqMap(map) -> str:
-            string = ""
-            for asciiVal in range(97, 123):
-                char = chr(asciiVal)
-                if char in map:
-                    string = string + char + str(map[char])
+        def mapToString(freqMap):
+            s = ""
+            for i in range(97, 123):
+                c = chr(i)
+                if c in freqMap and freqMap[c] > 0:
+                    s += c + str(freqMap[c])
+            return s
 
-            return string
+        mapToString({})
+        for s in strs:
+            freqMap = Counter(s)
+            encoded = mapToString(freqMap)
+            arr = aMap[encoded] if encoded in aMap else []
+            arr.append(s)
+            aMap[encoded] = arr
 
-        def getEncodedString(string: str) -> str:
-            return getEncodedStrFromFreqMap(getFreqMap(string))
-
-        map = dict()
-        for string in strs:
-            encStr = getEncodedString(string)
-            if encStr in map:
-                map[encStr].append(string)
-            else:
-                arr = [string]
-                map[encStr] = arr
-        return list(map.values())
+        return aMap.values()
 
 
 if __name__ == '__main__':
-    strs = ["eat", "tea", "tan", "ate", "nat", "bat" , "mat"]
+    strs = ["eat", "tea", "tan", "ate", "nat", "bat", "mat"]
     res = Solution().groupAnagrams(strs)
     print(res)
