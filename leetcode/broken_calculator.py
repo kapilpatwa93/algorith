@@ -15,7 +15,7 @@ class Solution:
 
 
 if __name__ == '__main__':
-    startValue = 3
+    startValue = 2
     target = 97
     res = Solution().brokenCalc(startValue, target)
     print(res)
