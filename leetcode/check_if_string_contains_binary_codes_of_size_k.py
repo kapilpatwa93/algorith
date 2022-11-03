@@ -16,7 +16,7 @@ class Solution:
 
 
 if __name__ == '__main__':
-    s = "111011001000"
+    s = "1110110010000"
     k = 3
     res = Solution().hasAllCodes(s, k)
     print(res)
