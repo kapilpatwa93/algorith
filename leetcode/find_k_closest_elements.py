@@ -60,7 +60,7 @@ class Solution:
 
 
 if __name__ == '__main__':
-    arr = [1, 2, 3, 5, 6, 7, 8, 9]
+    arr = [1, 2, 3, 5, 6, 7, 8, 9, 10]
     k = 5
     x = 4
     res = Solution().findClosestElements(arr, k, x)
