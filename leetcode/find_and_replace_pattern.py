@@ -22,7 +22,7 @@ class Solution:
 
 
 if __name__ == '__main__':
-    words = ["abc", "deq", "mee", "aqq", "dkd", "ccc", "xaa"]
+    words = ["abc", "deq", "mee", "aqq", "dkd", "ccc", "xaa", "asd"]
     pattern = "das"
     res = Solution().findAndReplacePattern(words, pattern)
     print(res)
