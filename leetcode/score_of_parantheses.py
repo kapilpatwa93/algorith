@@ -1,28 +1,23 @@
 class Solution:
     def scoreOfParentheses(self, s: str) -> int:
         stack = []
-        closed = False
-        for b in s:
-            if b == "(":
+        i = 0
+        while i < len(s):
+            if s[i] == "(":
                 stack.append(0)
-                closed = False
-            else:
-                if closed == False:
-                    stack.pop()
-                    stack.append(1)
-                else:
-                    total = 0
-                    while len(stack) > 0 and stack[-1] != 0:
-                        top = stack.pop()
-                        total += top
+            if s[i] == ")":
 
+                tsum = 0
+                while stack[len(stack) - 1] != 0:
+                    tsum += stack[len(stack) - 1]
                     stack.pop()
-                    stack.append(total * 2)
-                closed = True
+                stack.pop()
+                stack.append(1 if tsum == 0 else 2 * tsum)
+            i += 1
         return sum(stack)
 
 
 if __name__ == '__main__':
-    s = "()()"
+    s = "((()()))(()(()))"
     res = Solution().scoreOfParentheses(s)
     print(res)
