@@ -3,24 +3,20 @@ from typing import List
 
 class Solution:
     def searchInsert(self, nums: List[int], target: int) -> int:
-        index = -1
         start = 0
         end = len(nums) - 1
         while start <= end:
-            mid = int((start + end) / 2)
-            if nums[mid] == target:
-                index = mid
-                break
+            mid = int(((end - start) / 2) + start)
+            if target == nums[mid]:
+                return mid
+            if target > nums[mid]:
+                start = mid + 1
             if target < nums[mid]:
                 end = mid - 1
-            else:
-                start = mid + 1
-        if index == -1:
-            if nums[mid] > target:
-                index = mid
-            else:
-                index = mid + 1
-        return index
+        if target < nums[mid]:
+            return mid
+        else:
+            return mid + 1
 
 
 def main():
