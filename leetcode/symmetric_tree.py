@@ -12,18 +12,16 @@ class TreeNode:
 class Solution:
     def isSymmetric(self, root: Optional[TreeNode]) -> bool:
 
-        def traverse(subroot1: TreeNode, subroot2: TreeNode):
-            if subroot1 is None and subroot2 is None:
+        def recurse(left, right) -> bool:
+            if left is None and right is None:
                 return True
-            elif subroot1 is None:
+            if left is None or right is None:
                 return False
-            elif subroot2 is None:
+            if left.val != right.val:
                 return False
-            if subroot1.val != subroot2.val:
-                return False
-            return traverse(subroot1.right, subroot2.left) and traverse(subroot1.left, subroot2.right)
+            return recurse(left.left, right.right) and recurse(left.right, right.left)
 
-        return traverse(root, root)
+        return recurse(root.left, root.right)
 
 
 def getTree(nodes: List[int]) -> TreeNode:
