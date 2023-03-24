@@ -3,7 +3,7 @@ from typing import List
 
 class Solution:
     def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
-
+        abs
         def createTree():
             treeMap = {}
             for i in range(len(manager)):
