@@ -4,13 +4,15 @@ from typing import List
 class Solution:
     def numRescueBoats(self, people: List[int], limit: int) -> int:
         people.sort()
-        start = 0
-        end = len(people) - 1
+        p1 = 0
+        p2 = len(people) - 1
         count = 0
-        while start <= end:
-            if people[end] + people[start] <= limit:
-                start += 1
-            end -= 1
+        while p1 <= p2:
+            if (people[p2] + people[p1]) <= limit:
+                p2 -= 1
+                p1 += 1
+            else:
+                p2 -= 1
             count += 1
         return count
 
